@@ -8,7 +8,6 @@ import Music from "./Pages/Music";
 import MainContent from "./Components/MainContent";
 
 function App() {
- 
   return (
     <Router>
       <div className="App">
@@ -20,9 +19,7 @@ function App() {
             <Route exact path="/Music" element={<Music />} />
             <Route exact path="/Home" element={<MainContent />} />
           </Routes>
-          <div>
-         
-          </div>
+          <div></div>
         </section>
       </div>
     </Router>
