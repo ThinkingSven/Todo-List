@@ -2,9 +2,10 @@ import { MotionConfig } from "framer-motion";
 import React, { useState } from "react";
 import {motion} from "framer-motion"
 
-function MightDo({ todo }) {
+function MightDo({todo}) {
   const [done, setDone] = useState(todo.done);
   function handleDone() {
+    console.log(todo)
     setDone(done ? false : true);
   }
   return (

@@ -23,16 +23,18 @@ function MainContent() {
     const name = todoNameRef.current.value;
     if (name == "") return;
     setTodos((prevTodos) => {
-      return [...prevTodos, { key: uuid(), name: name, complete: false }];
+       let newTodos= [...prevTodos, { key: uuid(), name: name, complete: false }]
+       console.log(newTodos);
+       return newTodos;
     });
     todoNameRef.current.value = null;
-    console.log(todos)
   }
-  function handleEnter(event) {
-    if(event.keyCode === 13){
+  function handleEnter(value) {
+    if(value.key === "Enter"){
       console.log("enter pressed")
      handleAddTodo(todoNameRef);
-    } else {return(console.log("???"))}
+    }
+    console.log(value.key)
   }
   function handleDelete() {
     setTodos(() => {
