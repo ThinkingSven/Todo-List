@@ -45,7 +45,7 @@ function MainContent() {
   return (
     <div>
       <h1 className="headspace">
-        <a>Highlight</a>
+        <a>Simple Todolist</a>
       </h1>
       <Todolist todos={todos} />
       <input
